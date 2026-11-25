@@ -28,13 +28,26 @@ flowchart TD
 
 A fogalmi ábra az információ útját mutatja, nem a tényleges dashboard képernyőképe.
 
+## A lezárt audit eredményei (2026. november 15.)
+
+| Vizsgálati eredmény | Érték |
+|---|---:|
+| Vizsgált naplósorok | 653 |
+| Megőrzött munkalapok | 9/9 |
+| Változatlan eredeti képletek | 35 |
+| Dokumentált nyitott eltérések | 6 |
+
+**Minősítés:** audit lezárva; a rendszer feltételesen validált. A vizsgált alap-KPI-k egyeztek a független számítással. A teljes böngészős Excel-betöltés és a diagramrajzolás még elfogadási tesztet igényel.
+
+[Részletes auditösszefoglaló](docs/audit-results.md) · [Folyamat–adat–KPI mátrix](docs/process-data-kpi-matrix.md) · [Ellenőrzési módszertan](docs/validation.md)
+
 ## Audit és megállapítások
 - Hiányzó időtartamok: csak igazolható kezdés és befejezés alapján történő pótlás.
 - Kettős időelszámolás: összesítő munkablokkok és részletek elkülönítése.
 - Ellentmondó azonosítók: forrásadatok megőrzése, bizonytalanság jelölése.
 - Tényadatok és tervek elkülönítése, KPI-számítási szabályok ellenőrzése.
 
-A vizsgálat nem igazolja a teljes rendszer hibamentességét. A végleges auditszámok ellenőrzése még szükséges.
+A vizsgálat nem igazolja a teljes rendszer hibamentességét. A fenti eredmények a lezárt V3 jegyzőkönyv szerinti vizsgálati hatókörre vonatkoznak.
 
 ## Mintaadatok és validáció
 
