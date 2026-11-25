@@ -18,6 +18,35 @@ The internal audit log documents missing work durations, duplicate time accounti
 
 This is a scoped portfolio summary, not an assertion that every component of the production system is error-free. Final audit totals are withheld pending verification against the final report.
 
+## System overview
+
+```mermaid
+flowchart TD
+ A[Operational events and master data] --> B[Excel source records]
+ B --> C[Data preparation and validation]
+ C --> D[BI dashboard and KPI reporting]
+ C --> E[Exception register]
+ E --> B
+ D --> F[Management decisions]
+```
+
+Conceptual system flow, not a screenshot of the production dashboard.
+
+## Synthetic sample data
+
+[Open the complete CSV sample](sample-data/worklog.csv) · [Open the validation script](tests/validate.py)
+
+| Record | Block | Type | Status | Start | End | Minutes |
+|---|---|---|---|---|---|---:|
+| 1 | A | Summary | Actual | 08:00 | 08:40 | 40 |
+| 2 | A | Detail | Actual | 08:00 | 08:15 | 15 |
+| 3 | A | Detail | Actual | 08:15 | 08:40 | 25 |
+| 4 | B | Standalone | Actual | 09:00 | 09:20 | — |
+| 5 | C | Standalone | Actual | — | — | — |
+| 6 | D | Standalone | Planned | 10:00 | 10:30 | 30 |
+
+Expected result: 60 actual minutes (40 + 20), with one unresolved duration. Detail rows are not counted twice; planned work is excluded. These are synthetic demonstration records, not operational data.
+
 ## Reproducible illustration
 The included Python example uses entirely synthetic data and demonstrates work-block reconciliation and exception reporting. It is a separate demonstration, not the original production code.
 
