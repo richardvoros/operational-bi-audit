@@ -1,61 +1,56 @@
-# Operational BI & Data Quality Audit
+# Operatív BI-rendszer és adatminőségi audit
 
-**Vörös Richárd | Business Process Analysis · Data Quality · BI · Process Improvement**
+**Folyamatelemzés · Rendszerszervezés · Adatminőség · BI · Folyamatfejlesztés**
 
-[Magyar összefoglaló](docs/hu.md) · [System design](docs/system-design.md) · [Validation approach](docs/validation.md)
+[English version](README.en.md) · [Rendszerterv](docs/system-design.md) · [Magyar dokumentáció](docs/hu.md)
 
-## Business challenge
-An operational beekeeping system uses an Excel workbook and a browser-based BI dashboard to support planning and daily decisions. Reliable reporting requires consistent master data, traceable operational events and correct aggregation of work time. The audit examines these relationships rather than treating visual presentation as proof of data quality.
+## Üzleti probléma
+Egy Excel-alapú méhészeti nyilvántartás és böngészőben futó BI-rendszer megbízhatóságának vizsgálata. A cél, hogy az operatív eseményekből ellenőrizhető mutatók és döntési információk készüljenek.
 
-## Approach
-- Map operational processes, data inputs and decision outputs.
-- Separate current master-data status from historical events.
-- Reconcile identifiers, missing durations and overlapping work blocks.
-- Validate KPI inclusion rules and document unresolved exceptions.
-
-## Findings and corrective actions
-The internal audit log documents missing work durations, duplicate time accounting across detail and summary rows, and inconsistent entity assignments. Corrections include deriving duration only from recorded start/end times, counting a parent work block once, and preserving historical records when the correct assignment is uncertain.
-
-This is a scoped portfolio summary, not an assertion that every component of the production system is error-free. Final audit totals are withheld pending verification against the final report.
-
-## System overview
-
+## A rendszer működése
 ```mermaid
 flowchart TD
- A[Operational events and master data] --> B[Excel source records]
- B --> C[Data preparation and validation]
- C --> D[BI dashboard and KPI reporting]
- C --> E[Exception register]
+ A[Operatív események és törzsadatok] --> B[Excel nyilvántartás]
+ B --> C[Adatelőkészítés és ellenőrzés]
+ C --> D[BI és KPI riportok]
+ C --> E[Eltérésjegyzék]
  E --> B
- D --> F[Management decisions]
+ D --> F[Vezetői döntések]
 ```
 
-Conceptual system flow, not a screenshot of the production dashboard.
+A fogalmi ábra az információ útját mutatja, nem a tényleges dashboard képernyőképe.
 
-## Synthetic sample data
+## Audit és megállapítások
+- Hiányzó időtartamok: csak igazolható kezdés és befejezés alapján történő pótlás.
+- Kettős időelszámolás: összesítő munkablokkok és részletek elkülönítése.
+- Ellentmondó azonosítók: forrásadatok megőrzése, bizonytalanság jelölése.
+- Tényadatok és tervek elkülönítése, KPI-számítási szabályok ellenőrzése.
 
-[Open the complete CSV sample](sample-data/worklog.csv) · [Open the validation script](tests/validate.py)
+A vizsgálat nem igazolja a teljes rendszer hibamentességét. A végleges auditszámok ellenőrzése még szükséges.
 
-| Record | Block | Type | Status | Start | End | Minutes |
+## Mintaadatok és validáció
+
+[CSV mintaadatok](sample-data/worklog.csv) · [Python ellenőrzőprogram](tests/validate.py)
+
+| Sor | Blokk | Típus | Státusz | Kezdés | Befejezés | Perc |
 |---|---|---|---|---|---|---:|
-| 1 | A | Summary | Actual | 08:00 | 08:40 | 40 |
-| 2 | A | Detail | Actual | 08:00 | 08:15 | 15 |
-| 3 | A | Detail | Actual | 08:15 | 08:40 | 25 |
-| 4 | B | Standalone | Actual | 09:00 | 09:20 | — |
-| 5 | C | Standalone | Actual | — | — | — |
-| 6 | D | Standalone | Planned | 10:00 | 10:30 | 30 |
+| 1 | A | Összesítő | Tény | 08:00 | 08:40 | 40 |
+| 2 | A | Részlet | Tény | 08:00 | 08:15 | 15 |
+| 3 | A | Részlet | Tény | 08:15 | 08:40 | 25 |
+| 4 | B | Önálló | Tény | 09:00 | 09:20 | — |
+| 5 | C | Önálló | Tény | — | — | — |
+| 6 | D | Önálló | Terv | 10:00 | 10:30 | 30 |
 
-Expected result: 60 actual minutes (40 + 20), with one unresolved duration. Detail rows are not counted twice; planned work is excluded. These are synthetic demonstration records, not operational data.
-
-## Reproducible illustration
-The included Python example uses entirely synthetic data and demonstrates work-block reconciliation and exception reporting. It is a separate demonstration, not the original production code.
+Elvárt eredmény: 60 perc tényleges munkaidő és egy tisztázatlan időtartam. A részletek nem számítanak kétszer, a tervezett esemény kimarad. A példa mesterséges adatokat használ.
 
 ```bash
 python tests/validate.py
 ```
 
-## Technology
-Excel, browser-based HTML/JavaScript reporting, data reconciliation and business rule validation. Python is used for the standalone illustrative test.
+## Szakmai kompetenciák
+Folyamatfeltárás, rendszermodellezés, üzleti szabályok, adatminőség, BI-validáció, döntéstámogatás. Technológia: Excel, HTML/JavaScript, Python (önálló demonstráció).
 
-## Publication scope
-No production workbook, private operational records, exact locations or employer data are included. Internal documents and production dashboard source remain private.
+A csomag nem tartalmaz eredeti üzemi adatállományt vagy munkáltatói adatokat.
+
+## English summary
+A portfolio case study of operational BI and data quality auditing, covering process mapping, business rules, work-time reconciliation and exception handling. [Full English version](README.en.md).
