@@ -34,7 +34,7 @@ Conceptual system flow, not a screenshot of the production dashboard.
 
 ## Synthetic sample data
 
-[Open the complete CSV sample](sample-data/worklog.csv) · [Open the validation script](tests/validate.py)
+[Open the complete CSV sample](sample-data/worklog.csv)
 
 | Record | Block | Type | Status | Start | End | Minutes |
 |---|---|---|---|---|---|---:|
@@ -47,15 +47,11 @@ Conceptual system flow, not a screenshot of the production dashboard.
 
 Expected result: 60 actual minutes (40 + 20), with one unresolved duration. Detail rows are not counted twice; planned work is excluded. These are synthetic demonstration records, not operational data.
 
-## Reproducible illustration
-The included Python example uses entirely synthetic data and demonstrates work-block reconciliation and exception reporting. It is a separate demonstration, not the original production code.
-
-```bash
-python tests/validate.py
-```
+## Demonstration scope
+The synthetic CSV illustrates the audit rules; it is not production data or a standalone application.
 
 ## Technology
-Excel, browser-based HTML/JavaScript reporting, data reconciliation and business rule validation. Python is used for the standalone illustrative test.
+Excel, browser-based HTML/JavaScript reporting, data reconciliation and business rule validation.
 
 ## Publication scope
 No production workbook, private operational records, exact locations or employer data are included. Internal documents and production dashboard source remain private.
