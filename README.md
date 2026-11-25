@@ -68,7 +68,9 @@ A példa az Excel-alapú ellenőrzési logikát szemlélteti, nem önálló alka
 
 ## Dashboard képernyőképek
 
-[A hét tervezett dashboard-nézet és részletes családadatlap](docs/dashboard-kepernyokepek.md) – elő­készített bemutatólista, a képek még hiányoznak.
+[Dashboard-nézetek és részletes családadatlap](docs/dashboard-kepernyokepek.md) – 14 képernyőkép előkészítve, a képfájlok GitHub-integrációja még hátravan.
+
+**TESZTADATOK / TEST DATA:** A bemutató az audit tesztállományát szemlélteti, anonimizált telephelynevekkel. Az értékek nem aktuális üzemi adatokként értelmezendők; a tesztállomány nem szükségszerűen teljesen szintetikus.
 
 ## Szakmai kompetenciák
 Folyamatfeltárás, rendszermodellezés, üzleti szabályok, adatminőség, BI-validáció, döntéstámogatás. Technológia: Excel, HTML/JavaScript.
