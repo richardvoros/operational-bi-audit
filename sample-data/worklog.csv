@@ -1,0 +1,7 @@
+id,block,kind,status,start,end,minutes
+1,A,summary,actual,08:00,08:40,40
+2,A,detail,actual,08:00,08:15,15
+3,A,detail,actual,08:15,08:40,25
+4,B,standalone,actual,09:00,09:20,
+5,C,standalone,actual,,,
+6,D,standalone,planned,10:00,10:30,30
