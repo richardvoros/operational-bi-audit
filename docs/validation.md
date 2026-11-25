@@ -1,11 +1,15 @@
-# Validation approach
+# Adatminőség-ellenőrzési módszertan
 
-| Check | Expected behaviour |
+[English version](validation.en.md)
+
+| Ellenőrzés | Elvárt működés |
 |---|---|
-| Work-block aggregation | Count the summary once, not summary plus detail |
-| Missing duration | Derive only if valid start and end times exist |
-| Missing evidence | Flag as unresolved; do not silently impute zero |
-| Entity integrity | Flag inconsistent assignments; preserve source evidence |
-| Actual vs planned | Exclude planned events from actual KPI |
+| Munkablokkok összesítése | Az összesítő idő egyszer szerepeljen, a részletekkel ne duplikálódjon |
+| Hiányzó időtartam | Csak érvényes kezdési és befejezési időből számítható |
+| Hiányzó bizonyíték | Nyitott eltérésként jelölendő, nem helyettesíthető nullával |
+| Azonosítók integritása | Ellentmondó hozzárendelések jelzése, eredeti adatok megőrzése |
+| Tény és terv | A tervezett események kizárása a tény-KPI-ból |
 
-The synthetic example illustrates the first three rules and planned-event exclusion. Entity integrity is documented as an audit concern. Synthetic sample: 40 minutes summary + two component rows, 20 minutes derived from recorded times, one unknown-duration event and one planned event. Expected total: 60 minutes; one unresolved duration. No claim is made about production performance based on this example.
+A mesterséges példa a munkablokkok, a hiányzó időtartamok és a tény/terv elkülönítésének szabályait szemlélteti. Az azonosítók integritása külön auditvizsgálat tárgya.
+
+[CSV-minta](../sample-data/worklog.csv): 40 perc összesítő blokk, két részletsor, 20 perc számítható önálló esemény, egy ismeretlen időtartam és egy tervezett esemény. Elvárt összeg: 60 perc; egy tisztázatlan időtartam. Ez nem tényleges üzemi teljesítményadat.
