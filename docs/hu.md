@@ -10,4 +10,4 @@ A projekt célja, hogy egy Excel-alapú működési nyilvántartásból megbízh
 ## Szakmai érték
 Folyamatfeltárás, rendszerszervezés, adatminőség-ellenőrzés, KPI-validáció, eltéréskezelés. Az ellenőrzés nem azonos a teljes rendszer hibamentességének igazolásával.
 
-A nyilvános csomag kizárólag összefoglalót és mesterséges példát tartalmaz; az eredeti adatok bizalmasak.
+A jelenleg privát portfólió szakmai összefoglalót és mesterséges példát tartalmaz. Az eredeti üzemi adatok nincsenek feltöltve.
