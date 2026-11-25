@@ -1,28 +1,38 @@
-# Conceptual system design
+# Fogalmi rendszerterv
+
+[English version](system-design.en.md)
+
+## A működés folyamatai és alrendszerei
+
+![A méztermelési rendszer fő folyamatai és a méhészeti rendszer alrendszerei](../meheszeti-rendszer-abrai.webp)
+
+## Információáramlás
 
 ```mermaid
 flowchart LR
- A[Operational events] --> C[Excel records]
- B[Master data] --> C
- C --> D[Data preparation and validation]
- D --> E[BI indicators and alerts]
- E --> F[Management decisions]
- D --> G[Exception register]
+ A[Operatív események] --> C[Excel-nyilvántartás]
+ B[Törzsadatok] --> C
+ C --> D[Adatelőkészítés és ellenőrzés]
+ D --> E[BI-mutatók és jelzések]
+ E --> F[Vezetői döntések]
+ D --> G[Eltérésjegyzék]
  G --> C
 ```
 
-This is a conceptual information flow, not a verified deployment diagram.
+Ez fogalmi információáramlási ábra, nem ellenőrzött fizikai megvalósulási dokumentáció.
 
-| Functional domain | Main purpose | Decision output |
+| Funkcionális terület | Fő feladat | Döntési információ |
 |---|---|---|
-| Production | Seasonal activities and colony management | Operational priorities |
-| Health and risk | Monitoring and interventions | Follow-up inspections |
-| Resources and logistics | Equipment, locations and work organisation | Resource allocation |
-| Sales | Processing, packaging and market presence | Sales planning |
-| Planning and BI | Targets, data checks and KPI evaluation | Management decisions |
+| Termelés | Szezonális munkák és méhcsaládok kezelése | Operatív prioritások |
+| Méhegészségügy és kockázat | Megfigyelés és beavatkozások | Utóellenőrzések |
+| Erőforrások és logisztika | Eszközök, telephelyek és munkaszervezés | Erőforrás-elosztás |
+| Értékesítés | Feldolgozás, kiszerelés és piaci jelenlét | Értékesítési tervezés |
+| Tervezés és BI | Célok, adatellenőrzés és KPI-értékelés | Vezetői döntések |
 
-## Business rules
-- Historical events must not be silently overwritten with current master-data values.
-- Planned activities must be distinguished from actual completed events.
-- A work-block total must not be added to its own component rows.
-- Unknown values must remain distinguishable from zero.
+## Üzleti szabályok
+- A történeti eseményeket nem szabad a jelenlegi törzsadatokkal észrevétlenül felülírni.
+- A tervezett és ténylegesen elvégzett munkákat külön kell kezelni.
+- Egy munkablokk összesítő idejét nem szabad a saját részletsoraihoz hozzáadni.
+- Az ismeretlen érték nem azonos a nullával.
+
+A dokumentum a teljes belső rendszerterv rövid, portfóliócélú kivonata.
