@@ -8,4 +8,4 @@
 | Entity integrity | Flag inconsistent assignments; preserve source evidence |
 | Actual vs planned | Exclude planned events from actual KPI |
 
-The demonstration tests the first three rules and planned-event exclusion. Entity integrity is documented as an audit concern, not implemented in the example. Synthetic sample: 40 minutes summary + two component rows, 20 minutes derived from recorded times, one unknown-duration event and one planned event. Expected total: 60 minutes; one unresolved duration. No claim is made about production performance based on this example.
+The synthetic example illustrates the first three rules and planned-event exclusion. Entity integrity is documented as an audit concern. Synthetic sample: 40 minutes summary + two component rows, 20 minutes derived from recorded times, one unknown-duration event and one planned event. Expected total: 60 minutes; one unresolved duration. No claim is made about production performance based on this example.
