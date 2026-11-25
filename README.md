@@ -7,6 +7,14 @@
 ## Üzleti probléma
 Egy Excel-alapú méhészeti nyilvántartás és böngészőben futó BI-rendszer megbízhatóságának vizsgálata. A cél, hogy az operatív eseményekből ellenőrizhető mutatók és döntési információk készüljenek.
 
+## Rendszertervi ábrák
+
+![A méztermelési rendszer fő folyamatai és alrendszerei](meheszeti-rendszer-abrai.webp)
+
+**Bal oldalon:** éves működési ciklus és támogató folyamatok.
+
+**Jobb oldalon:** funkcionális alrendszerek, kapcsolataik és a BI szerepe.
+
 ## A rendszer működése
 ```mermaid
 flowchart TD
