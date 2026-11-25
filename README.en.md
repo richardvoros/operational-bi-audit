@@ -2,7 +2,7 @@
 
 **Vörös Richárd | Business Process Analysis · Data Quality · BI · Process Improvement**
 
-[Magyar összefoglaló](docs/hu.md) · [System design](docs/system-design.md) · [Validation approach](docs/validation.md)
+[Magyar összefoglaló](docs/hu.md) · [System design](docs/system-design.en.md) · [Validation approach](docs/validation.en.md)
 
 ## Business challenge
 An operational beekeeping system uses an Excel workbook and a browser-based BI dashboard to support planning and daily decisions. Reliable reporting requires consistent master data, traceable operational events and correct aggregation of work time. The audit examines these relationships rather than treating visual presentation as proof of data quality.
