@@ -68,9 +68,25 @@ A példa az Excel-alapú ellenőrzési logikát szemlélteti, nem önálló alka
 
 ## Dashboard képernyőképek
 
-[Dashboard-nézetek és részletes családadatlap](docs/dashboard-kepernyokepek.md) – 14 képernyőkép előkészítve, a képfájlok GitHub-integrációja még hátravan.
+[Dashboard-nézetek és részletes családadatlap](docs/dashboard-kepernyokepek.md) – mind a 14 képernyőkép megtekinthető.
 
 **TESZTADATOK / TEST DATA:** A bemutató az audit tesztállományát szemlélteti, anonimizált telephelynevekkel. Az értékek nem aktuális üzemi adatokként értelmezendők; a tesztállomány nem szükségszerűen teljesen szintetikus.
+
+### Munkaidő és hatékonyság
+
+![Munkaidő KPI-k](docs/images/01-kpi-munkaido.png)
+
+![Hatékonysági KPI-k](docs/images/02-kpi-hatekonysag.png)
+
+### Kockázati jelzések
+
+![Kockázati jelzések](docs/images/04-kockazati-jelzesek.png)
+
+### Részletes családadatlap
+
+![Családadatlap](docs/images/11-adatlap-torzsadat.png)
+
+[A teljes képgaléria – 14 kép](docs/dashboard-kepernyokepek.md)
 
 ## Szakmai kompetenciák
 Folyamatfeltárás, rendszermodellezés, üzleti szabályok, adatminőség, BI-validáció, döntéstámogatás. Technológia: Excel, HTML/JavaScript.
