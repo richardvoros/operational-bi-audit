@@ -66,6 +66,10 @@ Elvárt eredmény: 60 perc tényleges munkaidő és egy tisztázatlan időtartam
 
 A példa az Excel-alapú ellenőrzési logikát szemlélteti, nem önálló alkalmazás.
 
+## Dashboard képernyőképek
+
+[A hét tervezett dashboard-nézet és részletes családadatlap](docs/dashboard-kepernyokepek.md) – elő­készített bemutatólista, a képek még hiányoznak.
+
 ## Szakmai kompetenciák
 Folyamatfeltárás, rendszermodellezés, üzleti szabályok, adatminőség, BI-validáció, döntéstámogatás. Technológia: Excel, HTML/JavaScript.
 
