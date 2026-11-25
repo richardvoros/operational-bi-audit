@@ -38,7 +38,7 @@ A vizsgálat nem igazolja a teljes rendszer hibamentességét. A végleges audit
 
 ## Mintaadatok és validáció
 
-[CSV mintaadatok](sample-data/worklog.csv) · [Python ellenőrzőprogram](tests/validate.py)
+[CSV mintaadatok](sample-data/worklog.csv)
 
 | Sor | Blokk | Típus | Státusz | Kezdés | Befejezés | Perc |
 |---|---|---|---|---|---|---:|
@@ -51,12 +51,10 @@ A vizsgálat nem igazolja a teljes rendszer hibamentességét. A végleges audit
 
 Elvárt eredmény: 60 perc tényleges munkaidő és egy tisztázatlan időtartam. A részletek nem számítanak kétszer, a tervezett esemény kimarad. A példa mesterséges adatokat használ.
 
-```bash
-python tests/validate.py
-```
+A példa az Excel-alapú ellenőrzési logikát szemlélteti, nem önálló alkalmazás.
 
 ## Szakmai kompetenciák
-Folyamatfeltárás, rendszermodellezés, üzleti szabályok, adatminőség, BI-validáció, döntéstámogatás. Technológia: Excel, HTML/JavaScript, Python (önálló demonstráció).
+Folyamatfeltárás, rendszermodellezés, üzleti szabályok, adatminőség, BI-validáció, döntéstámogatás. Technológia: Excel, HTML/JavaScript.
 
 A csomag nem tartalmaz eredeti üzemi adatállományt vagy munkáltatói adatokat.
 
