@@ -2,7 +2,7 @@
 
 **Folyamatelemzés · Rendszerszervezés · Adatminőség · BI · Folyamatfejlesztés**
 
-[English version](README.en.md) · [Rendszerterv](docs/system-design.md) · [Magyar dokumentáció](docs/hu.md)
+[English version](README.en.md) · [Rendszerterv](docs/system-design.md) · [Magyar dokumentáció](docs/hu.md) · [BI-irányítópult – képernyőképes szakmai bemutató](docs/dashboard-kepernyokepek.md)
 
 ## Üzleti probléma
 Egy Excel-alapú méhészeti nyilvántartás és böngészőben futó BI-rendszer megbízhatóságának vizsgálata. A cél, hogy az operatív eseményekből ellenőrizhető mutatók és döntési információk készüljenek.
