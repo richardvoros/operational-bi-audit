@@ -1,17 +1,65 @@
 # BI-irányítópult – képernyőképes szakmai bemutató
 
-A bemutató célja a tényleges irányítópult funkcióinak szemléltetése. A képernyőképek csak ellenőrzött, bizalmas adatokat nem tartalmazó változatban kerülnek ide. Az alábbi hét nézet a tervezett képkészlet; a képek feltöltése még hátravan.
+**TESZTADATOK / TEST DATA.** Az audit tesztállományának képernyőképei, anonimizált telephelynevekkel. Nem aktuális üzemi mutatók; a tesztadatok nem szükségszerűen teljesen szintetikusak.
 
-| Nézet | Bemutatott funkció és döntéstámogatás |
-|---|---|
-| 1. Fő áttekintő dashboard | KPI-k, összesített állapot és vezetői áttekintés |
-| 2. Munkaidő és telephely | Munkaidő megoszlása, kapacitás és terhelés elemzése |
-| 3. Atkahullás és egészségügyi trend | Idősoros mérések és beavatkozások értékelése |
-| 4. Kaptár- és családállapot | Állapotmegoszlás és az ellenőrizendő egységek azonosítása |
-| 5. Kockázati jelzések | Eltérések, kockázatok és ellenőrzési prioritások |
-| 6. Szűrés, keresés és lefúrás | Az összesített adatoktól a részletes rekordokig történő navigáció |
-| 7. Egy méhcsalád teljes részletes adatlapja | Egyedi azonosítók, törzsadatok, állapot, kapcsolódó események, kezelések, mérések és naplóelőzmények – a ténylegesen rendelkezésre álló mezők szerint |
+### Munkaidő KPI-k
 
-## Adatvédelem és értelmezés
+![Munkaidő KPI-k](images/01-kpi-munkaido.png)
 
-A képek elkészítésekor a személyes adatok, a pontos telephelyek és a bizalmas üzemi adatok nem szerepelhetnek. A képernyőképek a funkciókat szemléltetik; önmagukban nem igazolják a teljes rendszer hibamentességét. Az audit hatóköre és korlátai az [audit eredményei](audit-results.md) dokumentumban találhatók.
+### Hatékonysági KPI-k
+
+![Hatékonysági KPI-k](images/02-kpi-hatekonysag.png)
+
+### Fajlagos gondozás
+
+![Fajlagos gondozás](images/03-fajlagos-gondozas.png)
+
+### Kockázati jelzések
+
+![Kockázati jelzések](images/04-kockazati-jelzesek.png)
+
+### Idősoros trend
+
+![Idősoros trend](images/05-idosoros-trend.png)
+
+### Mérési lefedettség
+
+![Mérési lefedettség](images/06-meresi-lefedettseg.png)
+
+### Munkaidő megoszlása
+
+![Munkaidő megoszlása](images/07-munkaido-megoszlas.png)
+
+### Eszköz- és családállapot
+
+![Eszköz- és családállapot](images/08-eszkoz-es-csaladallapot.png)
+
+### Utazási mutatók
+
+![Utazási mutatók](images/09-utazas.png)
+
+### Üzemanyagköltség
+
+![Üzemanyagköltség](images/10-uzemanyagkoltseg.png)
+
+## Részletes családadatlap – lefúrás
+
+### Családadatlap – törzsadatok
+
+![Családadatlap – törzsadatok](images/11-adatlap-torzsadat.png)
+
+### Családadatlap – állapot
+
+![Családadatlap – állapot](images/12-adatlap-allapot.png)
+
+### Családadatlap – megjegyzések
+
+![Családadatlap – megjegyzések](images/13-adatlap-megjegyzes.png)
+
+### Családadatlap – napló
+
+![Családadatlap – napló](images/14-adatlap-naplo.png)
+
+## Értelmezési korlátok
+
+A képernyőképek a funkciókat szemléltetik, nem igazolják önmagukban a teljes rendszer hibamentességét. Lásd az [audit eredményeit](audit-results.md).
